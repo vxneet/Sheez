@@ -1,0 +1,167 @@
+body {
+    background-color: #D63484;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@font-face {
+
+    font-family: myFont;
+    src: url(type.otf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.poem {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poem2 {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.poem3 {
+    position: absolute;
+    left: 80%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.poem4 {
+    position: absolute;
+    left: 80%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.poem5 {
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.poem span {
+    font-family: myFont;
+    color: #F3D7CA;
+    font-weight: 700;
+}
+
+.poem2 span {
+    font-family: 'myFont';
+    color: #F3D7CA;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.poem3 span {
+    font-family: 'myFont';
+    color: #F3D7CA;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.poem4 span {
+    font-family: 'myFont';
+    color: #F3D7CA;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.poem5 span {
+    font-family: 'myFont';
+    color: #F3D7CA;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.poem2 :hover {
+    opacity: 1;
+}
+
+.poem3 :hover {
+    opacity: 1;
+}
+
+.poem4 :hover {
+    opacity: 1;
+}
+
+.poem5 :hover {
+    opacity: 1;
+}
+
+.marquee {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: 5vh;
+    user-select: none;
+    gap: 2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 1.7rem;
+    margin-top: 20%;
+    /* background-color: green; */
+    opacity: 0;
+    /* transform: skewY(-3deg); */
+    /* transform: rotate(-0deg) translateY(-30px) translateX(50px); */
+}
+
+.marquee:hover {
+    opacity: 1;
+    /* -webkit-text-stroke: 1.5px #F3D7CA;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transition: all 0s ease;
+    -webkit-font-smoothing: antialiased; */
+    /*-moz-osx-font-smoothing: grayscale;*/
+
+}
+
+.marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-width: 100%;
+    animation: scroll 15s linear infinite reverse;
+}
+
+.marquee__group span {
+    color: #F3D7CA;
+    font-size: 2vw;
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: 'myFont';
+    /* text-transform: uppercase; */
+
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .marquee__group span {
+        font-size: 2vw;
+    }
+}
